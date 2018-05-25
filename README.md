@@ -1,6 +1,8 @@
 # ghinstallation
 
-[![GoDoc](https://godoc.org/github.com/bradleyfalzon/ghinstallation?status.svg)](https://godoc.org/github.com/bradleyfalzon/ghinstallation)
+This is a fork of [bradleyfalzon/ghinstallation](https://github.com/bradleyfalzon/ghinstallation)
+that adds support for context.Context on token refresh requests (see
+[PR#14](https://github.com/bradleyfalzon/ghinstallation/pull/14)).
 
 `ghinstallation` provides `Transport`, which implements `http.RoundTripper` to provide authentication as an installation
 for GitHub Apps.
@@ -15,13 +17,13 @@ See https://developer.github.com/apps/building-integrations/setting-up-and-regis
 Get the package:
 
 ```bash
-go get -u github.com/bradleyfalzon/ghinstallation
+go get -u github.com/mspiegel/ghinstallation
 ```
 
 Usage:
 
 ```go
-import "github.com/bradleyfalzon/ghinstallation"
+import "github.com/mspiegel/ghinstallation"
 
 func main() {
     // Shared transport to reuse TCP connections.
